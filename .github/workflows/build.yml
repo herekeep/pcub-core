@@ -1,7 +1,6 @@
-cat > .github/workflows/build.yml <<'EOF'
 name: Build and Release
 
-on:
+"on":
   push:
     branches: [ "main", "master" ]
     tags: [ 'v*' ]
@@ -47,4 +46,3 @@ jobs:
         with:
           files: build/libs/*.jar
           generate_release_notes: true
-EOF
